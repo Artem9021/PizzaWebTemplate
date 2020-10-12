@@ -122,6 +122,9 @@ ul.nav-list {
     	font-size: 2rem;
     	cursor: pointer;
     }
+    .card {
+        margin: 0.7rem auto;	
+    }
 }
 
 /* HOME SECTION */
