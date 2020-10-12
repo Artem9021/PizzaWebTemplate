@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Pacifico&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
+	font-style: normal;
+}
+
+html {
+	scroll-behavior: smooth;
+
+	font-size: 10px;
+	/* To make REMs usage easier*/
+}
+
+
+body {
+	background: #111;
+}
+/* TOP NAV */
+
+header {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	transition: background 0.4s ease-in-out;
+	background: rgba(0, 0, 0, 0);
+}
+
+header.opacity{
+	transition: background 0.2s ease-in-out;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+nav {
+	margin: 0 auto;
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+ul.nav-list {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+}
+
+.nav-link {
+	margin: 0 1rem;
+}
+
+.nav-link a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 2rem;
+}
+.logo {
+	font-family: 'Pacifico', cursive;
+	color: #ffffff;
+	font-size: 2.5rem;
+}
+
+.menu-btn {
+	display: none;
+}
+
+@media screen and (min-width: 480px) {
+	.nav-list {
+	    	justify-content: space-between;	
+    }
+    .menu-btn, .menu-btn-close {
+    	display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-btn {
+	    display: block;
+    }
+
+    .nav-list {
+    	transition: left 1s ease-in-out;
+    	position: fixed;
+    	top: 0;
+    	left: -100vw;
+    	height: 100vh;
+    	width: 100%;
+    	background: #111111;
+    	display: flex;
+    	align-items: center;
+    	justify-content: space-around;	
+    	flex-direction: column;
+    }
+    .nav-list.open {
+    	transition: left 1s ease-in-out;
+    	left: 0;
+    }
+    .menu-btn-close {
+    	pointer-events: none;
+    	opacity: 0;
+    	position: fixed;
+    	top: 0;
+    	right: 0;
+    	padding: 2rem;
+    	color: #ffffff;
+    	font-size: 3rem;
+    	cursor: pointer;
+    	z-index: 100;
+    }
+    .menu-btn-close.open {
+    	transition: all 2s ease;
+    	opacity: 1;
+    	pointer-events: all;
+    }
+    .menu-btn {
+    	color: #ffffff;
+    	font-size: 2rem;
+    	cursor: pointer;
+    }
+}
+
+/* HOME SECTION */
+
+.home {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url(./img/background.jpg);
+	background-size: cover;
+	
+}
+
+.home h2 {
+	font-size: 4.5rem;
+	margin: 2rem 0;
+}
+
+.home p {
+	font-size: 2.5rem;
+	margin: 2rem 0;
+}
+
+h2, h3, p {
+	color: #ffffff;
+}
+
+.container {
+	text-align: center;
+	max-width: 90%;
+}
+
+.button-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.btn {
+	outline: none;
+	border: none;
+	padding: 0.7rem 3rem; 
+	font-weight: 600;
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: #000000;
+
+}
+
+.btn-main {
+	background: #FDD835;
+	border: 2px solid #FDD835;
+	font-weight: 600;
+}
+
+.btn-secondary {
+	background: rgba(0, 0, 0, 0.2);
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	font-weight: 400;
+}
+
+/* ABOUT US SECTION */
+
+.about {
+	min-height: 450px;
+	width: 100%;
+	background: #111;
+	padding-bottom: 2rem;
+}
+
+section h3 {
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	padding: 4.5rem;
+	font-size: 3rem;
+}
+
+.card {
+	width: 275px;
+	background: #333333;
+	color: #fff;
+	height: 300px;
+	border-radius: 1rem;
+
+}
+
+.card-top {
+	background: #FFC700;
+	height: 50%;
+	font-size: 6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1rem 1rem 0 0;
+
+}
+
+.card-bottom {
+	padding: 0.5rem;
+}
+
+.card-bottom h4 {
+	text-align: center;
+	font-size: 2.2rem;
+	margin: 0.5rem;
+}
+
+.card-bottom p {
+	font-size: 1.7rem;
+	margin: 0.8rem;
+}
+
+.cards-container {
+
+	display: grid;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(auto-fit, 275px);
+	grid-gap: 1rem;
+}
+
+/* ORDER SECION */
+
+.order {
+	width: 100%;
+	background: #111;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+
+.divider {
+	width: 100%;
+}
+
+.contact {
+	display: flex;
+	align-items: center;
+	margin: 1rem;
+}
+
+.contact p {
+	font-size: 2rem;
+}
+
+.contact .phone {
+	font-size: 3rem;
+}
+
+.contact .icon {
+	font-size: 5rem;
+	margin-right: 2rem;
+	color: #ffffff; 
+}
+
+/* FOOTER */	
+
+footer {
+	margin: -0.1rem;
+	color: #000000;
+	background: #ffd050;
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 1.8rem;
+}
+
+footer p {
+	color: #000000;
+	text-align: center;
+}
